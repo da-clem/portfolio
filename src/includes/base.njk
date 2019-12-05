@@ -48,13 +48,17 @@
     </div>
   </nav>
 
-  {% block header %}{% endblock %}
+  <main>
 
-  {% block content %}
-
-    {{ content | safe }}
     
-  {% endblock %}
+      {% block header %}{% endblock %}
+
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    
+
+  </main>
 
 {# TODO: FOOTER #}
 
