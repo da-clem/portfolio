@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ title }}</title>
+  
 
 
   <!-- Bootstrap core CSS -->
@@ -26,7 +27,7 @@
     <a class="navbar-brand" href="/">
       <span class="d-block d-lg-none">Clément Lattelais</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/assets/img/profile.jpg" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,30 +42,19 @@
           <a class="nav-link" href="/projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/notes">Notes</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1> {{ title }} </h1>
-        <p> {{ description }} </p>
-      </div>
-    </div>
-  </div>
+  {% block header %}{% endblock %}
 
   {% block content %}
-  
+
     {{ content | safe }}
     
-  {% endblock content %}
-
+  {% endblock %}
 
 {# TODO: FOOTER #}
 
