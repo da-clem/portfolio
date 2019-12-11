@@ -4,7 +4,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-md-8 mx-auto m-5 text-center ">
         <h1> {{ title }} </h1>
         <p> {{ description }} </p>
       </div>
@@ -15,14 +15,7 @@
 
 {% block content %}
 
-  
-  <div class="container">
-
-
-      {{ content | safe }}
-
-
-  </div>
+    {{ content | safe }}
 
 {% endblock content%}
 
